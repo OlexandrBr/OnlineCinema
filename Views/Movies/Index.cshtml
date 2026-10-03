@@ -1,0 +1,26 @@
+@model List<Movie>
+@inject MovieStorage Storage
+
+<h1>Фільми</h1>
+
+@if (Model.Count == 0)
+{
+    <p>Фільмів ще немає. Додайте перший.</p>
+}
+
+<div class="grid">
+    @foreach (var movie in Model)
+    {
+        <div class="card">
+            <a asp-action="Watch" asp-route-id="@movie.Id">
+                <img src="@Storage.GetSasUrl(movie.PosterBlob)" alt="@movie.Title" />
+            </a>
+            <div class="info">
+                <h2>@movie.Title</h2>
+                <p class="genre">@movie.Genre</p>
+                <p>@movie.Description</p>
+                <a class="button" asp-action="Watch" asp-route-id="@movie.Id">Дивитися</a>
+            </div>
+        </div>
+    }
+</div>

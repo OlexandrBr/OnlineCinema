@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Онлайн кінотеатр</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <nav>
+        <a asp-controller="Movies" asp-action="Index">Онлайн кінотеатр</a>
+        <a asp-controller="Movies" asp-action="Create">Додати фільм</a>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>

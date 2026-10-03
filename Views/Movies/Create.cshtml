@@ -1,0 +1,27 @@
+@model Movie
+
+<h1>Додати фільм</h1>
+
+@if (ViewBag.Error != null)
+{
+    <p class="error">@ViewBag.Error</p>
+}
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <label>Назва</label>
+    <input type="text" name="Title" value="@Model?.Title" />
+
+    <label>Жанр</label>
+    <input type="text" name="Genre" value="@Model?.Genre" />
+
+    <label>Опис</label>
+    <textarea name="Description" rows="4">@Model?.Description</textarea>
+
+    <label>Постер</label>
+    <input type="file" name="poster" accept="image/*" />
+
+    <label>Відео або трейлер</label>
+    <input type="file" name="video" accept="video/*" />
+
+    <button type="submit">Додати</button>
+</form>

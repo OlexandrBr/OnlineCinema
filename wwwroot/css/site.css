@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    background: #121110;
+    color: #f3efe8;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+nav {
+    padding: 16px 24px;
+    border-bottom: 1px solid #322e2a;
+}
+
+nav a {
+    color: #f3efe8;
+    text-decoration: none;
+    margin-right: 24px;
+}
+
+nav a:first-child {
+    color: #f5b301;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1c1a18;
+    border: 1px solid #322e2a;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+.info {
+    padding: 14px 16px 16px;
+}
+
+.info h2 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+}
+
+p {
+    line-height: 1.5;
+    color: #cfc8be;
+}
+
+.genre {
+    margin: 0 0 8px;
+    color: #a39c92;
+    font-size: .85rem;
+}
+
+video {
+    width: 100%;
+    max-height: 70vh;
+    background: black;
+    border-radius: 10px;
+}
+
+form {
+    max-width: 520px;
+}
+
+label {
+    display: block;
+    margin: 14px 0 4px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    background: #1c1a18;
+    color: #f3efe8;
+    border: 1px solid #4a443e;
+    border-radius: 6px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+button, .button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 9px 20px;
+    background: #f5b301;
+    color: #171200;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.delete {
+    background: #b3261e;
+    color: white;
+}
+
+.error {
+    color: #ff8a80;
+}
